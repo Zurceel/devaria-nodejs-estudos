@@ -1,6 +1,6 @@
-const readLine = requeire('readLine').createInterface({
-    input: process.stdin,
-    output: process.stdout
+const readLine = require('readline').createInterface({
+    input : process.stdin,
+    output : process.stdout
 });
 
 console.log('Essse programa vai checar se você é maior de 18 anos e tem habilitação se você pode entrar no kart');
@@ -11,7 +11,7 @@ readLine.question('Qual o ano do seu nascimento?' , ano => {
         console.log('Você não tem 18 anos');
     }else{
         readLine.question("Você tem habilitação? (Sim/Não)", temHabilitacao => {
-            if(!(temHabilitacao.toUperrCase() === "SIM")){
+            if(!(temHabilitacao.toUpperCase() === "SIM")){
                 console.log('Você não tem habilitação para entrar no Kart');
             }else{
                 readLine.question("Qual seu nome?", nome =>{
